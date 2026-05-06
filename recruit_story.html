@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>土木の仕事で生きる。| 採用特設ページ | （株）保永土建</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+/* ===================== RESET ===================== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Noto Sans JP',sans-serif;
+  background:#111;
+  color:#e8e2d8;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+
+:root{
+  --gold:#C49A3C;
+  --gold-l:#D4AA50;
+  --gold-dim:#9A7828;
+  --black:#0E0E0E;
+  --charcoal:#1A1A1A;
+  --iron:#2C2C2C;
+  --cream:#E8E2D8;
+  --cream-d:#CDC4B4;
+  --silver:#8A8A8A;
+  --white:#FFFFFF;
+  --serif:'Shippori Mincho B1','Georgia',serif;
+  --sans:'Noto Sans JP',sans-serif;
+  --roman:'Cormorant Garamond',serif;
+  --oswald:'Oswald',sans-serif;
+}
+
+/* ===================== PHOTO PLACEHOLDERS ===================== */
+.photo{
+  background:#2e2820;
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.photo span{
+  font-size:11px;color:rgba(255,255,255,0.28);
+  letter-spacing:1px;text-align:center;
+  padding:0 24px;line-height:2;
+  font-family:var(--sans);font-weight:300;
+}
+.photo.light{background:#4a4238;}
+.photo.mid{background:#6a5e50;}
+.photo.gold-tint{background:#3a2e18;}
+
+/* ===================== SCROLL REVEAL ===================== */
+.rev{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.22,.8,.22,1),transform .9s cubic-bezier(.22,.8,.22,1);}
+.rev.on{opacity:1;transform:none;}
+.revL{opacity:0;transform:translateX(-40px);transition:opacity .9s .1s cubic-bezier(.22,.8,.22,1),transform .9s .1s cubic-bezier(.22,.8,.22,1);}
+.revL.on{opacity:1;transform:none;}
+.revR{opacity:0;transform:translateX(40px);transition:opacity .9s .15s cubic-bezier(.22,.8,.22,1),transform .9s .15s cubic-bezier(.22,.8,.22,1);}
+.revR.on{opacity:1;transform:none;}
+.d1{transition-delay:.12s!important;}
+.d2{transition-delay:.26s!important;}
+.d3{transition-delay:.42s!important;}
+.d4{transition-delay:.58s!important;}
+
+/* ===================== HEADER ===================== */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  height:60px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 48px;
+  background:rgba(14,14,14,.96);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(196,154,60,.15);
+}
+.hd-logo{
+  display:flex;flex-direction:column;gap:2px;
+}
+.hd-logo-en{
+  font-family:var(--oswald);font-size:16px;font-weight:700;
+  color:var(--gold);letter-spacing:.14em;
+}
+.hd-logo-ja{font-family:var(--sans);font-size:9px;font-weight:300;color:var(--silver);letter-spacing:.15em;}
+.hd-nav{display:flex;align-items:center;gap:28px;}
+.hd-nav a{font-size:11px;color:var(--silver);letter-spacing:.04em;transition:color .2s;}
+.hd-nav a:hover{color:var(--gold);}
+.hd-entry{
+  background:var(--gold);color:var(--black) !important;
+  padding:9px 22px;font-size:10px;letter-spacing:.2em;font-weight:700;
+  transition:background .2s !important;
+}
+.hd-entry:hover{background:var(--gold-l) !important;}
+.hd-ham{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:8px;}
+.hd-ham span{display:block;width:22px;height:2px;background:var(--white);transition:.3s;}
+.hd-ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hd-ham.open span:nth-child(2){opacity:0;}
+.hd-ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.sp-nav{
+  display:none;position:fixed;top:60px;left:0;right:0;bottom:0;
+  background:rgba(10,10,10,.99);z-index:299;
+  flex-direction:column;align-items:center;justify-content:center;gap:28px;
+}
+.sp-nav.open{display:flex;}
+.sp-nav a{font-size:18px;color:var(--white);letter-spacing:.12em;transition:color .2s;}
+.sp-nav a:hover{color:var(--gold);}
+
+/* ===================== PAGE HERO ===================== */
+.page-hero{margin-top:60px;background:linear-gradient(135deg,var(--charcoal) 0%,#1c1408 100%);padding:80px 32px;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(196,154,60,0.12) 1px,transparent 1px);background-size:32px 32px;}
+.page-hero-inner{max-width:1160px;margin:0 auto;position:relative;}
+.page-hero-label{font-family:var(--oswald);font-size:11px;letter-spacing:.3em;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.page-hero-label::before{content:'';display:block;width:24px;height:1px;background:var(--gold);}
+.page-hero-h1{font-family:var(--serif);font-size:clamp(28px,4vw,52px);color:var(--white);font-weight:800;margin-bottom:14px;line-height:1.25;letter-spacing:-.5px;}
+.page-hero-h1 em{color:var(--gold);font-style:normal;}
+.page-hero-sub{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.8;max-width:560px;margin-bottom:20px;}
+.page-hero-cta{display:inline-block;background:var(--gold);color:var(--black);font-family:var(--oswald);font-size:12px;font-weight:700;letter-spacing:.2em;padding:12px 28px;margin-top:8px;transition:background .2s;}
+.page-hero-cta:hover{background:var(--gold-l);}
+.breadcrumb{margin-top:24px;display:flex;gap:8px;align-items:center;}
+.breadcrumb a,.breadcrumb span{font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:.05em;transition:color .2s;}
+.breadcrumb a:hover{color:var(--gold);}
+.breadcrumb .sep{color:rgba(255,255,255,0.2);}}
+/* ===================== 02 THEME INTRO ===================== */
+.themes{
+  background:var(--charcoal);
+  padding:0;
+  display:flex;
+}
+.theme-item{
+  flex:1;border-right:1px solid rgba(196,154,60,.12);
+  padding:72px 40px;cursor:default;
+  transition:background .4s;
+  position:relative;overflow:hidden;
+}
+.theme-item:last-child{border-right:none;}
+.theme-item::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform .5s ease;
+}
+.theme-item:hover{background:rgba(196,154,60,.06);}
+.theme-item:hover::before{transform:scaleX(1);}
+.theme-no{
+  font-family:var(--oswald);font-size:48px;font-weight:700;
+  color:var(--gold);opacity:.2;line-height:1;margin-bottom:16px;
+}
+.theme-tag{
+  font-family:var(--oswald);font-size:10px;letter-spacing:.22em;
+  color:var(--gold);margin-bottom:12px;
+}
+.theme-title{
+  font-family:var(--serif);font-size:clamp(18px,2vw,24px);
+  color:var(--white);font-weight:700;line-height:1.4;margin-bottom:12px;
+}
+.theme-desc{font-size:12px;color:var(--silver);line-height:1.9;}
+
+/* ===================== 03 STORY 1 — 地面の下に ===================== */
+.s1-open{
+  background:var(--black);
+  padding:140px 24px 0;text-align:center;
+  position:relative;
+}
+.story-chapter{
+  font-family:var(--roman);font-size:11px;font-style:italic;
+  color:var(--gold);letter-spacing:5px;
+  display:block;margin-bottom:20px;
+}
+.s1-open-h2{
+  font-family:var(--serif);
+  font-size:clamp(32px,5.5vw,72px);
+  color:var(--white);font-weight:800;
+  line-height:1.15;letter-spacing:-1px;
+  margin-bottom:0;padding-bottom:80px;
+}
+.s1-open-h2 em{color:var(--gold);font-style:normal;}
+.s1-photo{width:100%;height:60vh;min-height:400px;}
+.s1-body{
+  max-width:720px;margin:0 auto;
+  padding:96px 24px;
+}
+.s1-body p{
+  font-family:var(--sans);font-size:clamp(14px,1.5vw,16px);
+  color:var(--cream-d);line-height:2.2;margin-bottom:28px;
+  font-weight:300;letter-spacing:.04em;
+}
+.s1-body p strong{
+  font-weight:700;color:var(--white);
+}
+
+/* ===================== 04 PULL QUOTE 1 ===================== */
+.pull1{
+  background:var(--iron);
+  padding:120px 24px;text-align:center;
+  border-top:1px solid rgba(196,154,60,.15);
+  border-bottom:1px solid rgba(196,154,60,.15);
+}
+.pull1-quote{
+  font-family:var(--serif);
+  font-size:clamp(24px,4vw,52px);
+  color:var(--white);font-weight:800;
+  line-height:1.4;letter-spacing:-.5px;
+  max-width:800px;margin:0 auto 24px;
+}
+.pull1-quote em{color:var(--gold);font-style:normal;}
+.pull1-source{
+  font-family:var(--oswald);font-size:10px;letter-spacing:.25em;
+  color:var(--silver);
+}
+
+/* ===================== 05 FACT — インフラの規模 ===================== */
+.fact1{
+  background:var(--black);
+  padding:120px 24px;
+}
+.fact1-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+}
+.fact1-text{}
+.fact1-no{
+  font-family:var(--roman);font-size:11px;font-style:italic;
+  color:var(--gold);letter-spacing:4px;
+  display:block;margin-bottom:20px;
+}
+.fact1-h2{
+  font-family:var(--serif);font-size:clamp(28px,3.5vw,48px);
+  color:var(--white);font-weight:800;
+  line-height:1.3;margin-bottom:24px;
+}
+.fact1-h2 em{color:var(--gold);font-style:normal;}
+.fact1-div{width:40px;height:2px;background:var(--gold);margin:24px 0;}
+.fact1-body p{
+  font-size:14px;color:var(--cream-d);
+  line-height:2.1;margin-bottom:20px;font-weight:300;
+}
+.fact1-nums{display:flex;gap:40px;margin-top:32px;}
+.fact1-num .n{
+  font-family:var(--oswald);font-size:40px;font-weight:700;
+  color:var(--gold);line-height:1;
+}
+.fact1-num .n b{font-size:20px;font-weight:400;margin-left:2px;}
+.fact1-num .l{
+  font-size:11px;color:var(--silver);margin-top:6px;
+  line-height:1.7;letter-spacing:.04em;
+}
+.fact1-photo{width:100%;min-height:480px;}
+
+/* ===================== 06 STORY 2 — 重機を動かす ===================== */
+.s2-open{
+  background:var(--charcoal);
+  padding:140px 24px 80px;
+}
+.s2-inner{max-width:1160px;margin:0 auto;}
+.s2-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;
+  margin-top:80px;
+}
+.s2-left{}
+.s2-h2{
+  font-family:var(--serif);font-size:clamp(28px,4vw,56px);
+  color:var(--white);font-weight:800;
+  line-height:1.2;margin-bottom:24px;letter-spacing:-.5px;
+}
+.s2-h2 em{color:var(--gold);font-style:normal;}
+.s2-div{width:40px;height:2px;background:var(--gold);margin:24px 0;}
+.s2-body p{
+  font-size:14px;color:var(--cream-d);
+  line-height:2.1;margin-bottom:20px;font-weight:300;
+}
+.s2-photo-wrap{display:grid;grid-template-rows:1fr 1fr;gap:12px;}
+.s2-photo-a{width:100%;height:300px;}
+.s2-photo-b{width:100%;height:200px;}
+
+/* ===================== 07 MACHINE ITEMS ===================== */
+.machines{
+  background:var(--black);
+  padding:120px 24px;
+}
+.machines-inner{max-width:1160px;margin:0 auto;}
+.machines-head{margin-bottom:80px;}
+.machines-head-label{
+  font-family:var(--roman);font-size:11px;font-style:italic;
+  color:var(--gold);letter-spacing:4px;margin-bottom:16px;display:block;
+}
+.machines-head-h2{
+  font-family:var(--serif);font-size:clamp(24px,3vw,40px);
+  color:var(--white);font-weight:800;line-height:1.3;
+}
+.machines-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
+}
+.machine-card{
+  padding:48px 32px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(196,154,60,.08);
+  position:relative;overflow:hidden;
+  transition:background .3s;
+}
+.machine-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform .4s;
+}
+.machine-card:hover{background:rgba(196,154,60,.06);}
+.machine-card:hover::before{transform:scaleX(1);}
+.machine-icon{
+  font-family:var(--oswald);font-size:52px;font-weight:700;
+  color:var(--gold);opacity:.18;line-height:1;margin-bottom:20px;
+}
+.machine-name{
+  font-family:var(--serif);font-size:20px;color:var(--white);
+  font-weight:700;margin-bottom:10px;
+}
+.machine-role{
+  font-family:var(--oswald);font-size:10px;letter-spacing:.2em;
+  color:var(--gold);margin-bottom:12px;
+}
+.machine-desc{font-size:13px;color:var(--silver);line-height:1.9;}
+
+/* ===================== 08 PULL QUOTE 2 ===================== */
+.pull2{
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:480px;
+}
+.pull2-dark{
+  background:var(--black);
+  display:flex;align-items:center;justify-content:center;
+  padding:80px 56px;
+}
+.pull2-quote{
+  font-family:var(--serif);font-size:clamp(22px,2.8vw,38px);
+  color:var(--white);font-weight:800;line-height:1.5;
+}
+.pull2-quote em{color:var(--gold);font-style:normal;}
+.pull2-photo{min-height:480px;}
+
+/* ===================== 09 STORY 3 — 施工管理へ ===================== */
+.s3-open{
+  background:var(--charcoal);
+  padding:140px 24px 0;text-align:center;
+}
+.s3-h2{
+  font-family:var(--serif);
+  font-size:clamp(30px,5vw,68px);
+  color:var(--white);font-weight:800;
+  line-height:1.15;letter-spacing:-1px;
+  margin-bottom:80px;
+}
+.s3-h2 em{color:var(--gold);font-style:normal;}
+.s3-photo{width:100%;height:55vh;min-height:380px;}
+
+/* ===================== 10 CAREER STEPS ===================== */
+.career{
+  background:var(--black);
+  padding:120px 24px;
+}
+.career-inner{max-width:1000px;margin:0 auto;}
+.career-head{text-align:center;margin-bottom:80px;}
+.career-head-label{
+  font-family:var(--roman);font-size:11px;font-style:italic;
+  color:var(--gold);letter-spacing:4px;display:block;margin-bottom:16px;
+}
+.career-head-h2{
+  font-family:var(--serif);font-size:clamp(24px,3vw,40px);
+  color:var(--white);font-weight:800;line-height:1.3;
+}
+.career-step{
+  display:grid;grid-template-columns:80px 1fr;gap:40px;
+  padding:48px 0;border-bottom:1px solid rgba(196,154,60,.1);
+  position:relative;
+}
+.career-step:last-child{border-bottom:none;}
+.career-step-left{}
+.career-step-num{
+  font-family:var(--oswald);font-size:52px;font-weight:700;
+  color:var(--gold);opacity:.35;line-height:1;
+}
+.career-step-yr{
+  font-size:11px;color:var(--silver);letter-spacing:.1em;margin-top:4px;
+}
+.career-step-right{}
+.career-step-title{
+  font-family:var(--serif);font-size:clamp(18px,2vw,24px);
+  color:var(--white);font-weight:700;margin-bottom:12px;line-height:1.4;
+}
+.career-step-title em{color:var(--gold);font-style:normal;}
+.career-step-body{
+  font-size:14px;color:var(--cream-d);line-height:2.1;font-weight:300;
+}
+
+/* ===================== 11 PATHS ===================== */
+.paths{
+  background:var(--charcoal);
+  padding:120px 24px;
+}
+.paths-inner{max-width:1160px;margin:0 auto;}
+.paths-head{text-align:center;margin-bottom:80px;}
+.paths-head-label{
+  font-family:var(--roman);font-size:11px;font-style:italic;
+  color:var(--gold);letter-spacing:4px;display:block;margin-bottom:16px;
+}
+.paths-head-h2{
+  font-family:var(--serif);font-size:clamp(22px,2.8vw,38px);
+  color:var(--white);font-weight:800;line-height:1.3;margin-bottom:16px;
+}
+.paths-head-sub{font-size:13px;color:var(--silver);letter-spacing:.06em;}
+.paths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.path-card{
+  border:1px solid rgba(196,154,60,.2);
+  padding:40px 28px 36px;
+  position:relative;overflow:hidden;
+  transition:background .3s,border-color .3s;
+  cursor:default;
+}
+.path-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--gold);
+}
+.path-card:hover{background:rgba(196,154,60,.07);border-color:rgba(196,154,60,.4);}
+.path-route{
+  font-family:var(--oswald);font-size:10px;letter-spacing:.25em;
+  color:var(--gold);margin-bottom:8px;
+}
+.path-title{
+  font-family:var(--serif);font-size:20px;color:var(--white);
+  font-weight:700;margin-bottom:12px;line-height:1.4;
+}
+.path-desc{font-size:13px;color:var(--silver);line-height:1.9;margin-bottom:20px;}
+.path-new{
+  display:inline-block;background:var(--gold);color:var(--black);
+  font-family:var(--oswald);font-size:9px;letter-spacing:.15em;font-weight:700;
+  padding:3px 8px;margin-left:8px;vertical-align:middle;
+}
+
+/* ===================== 12 VOICE ===================== */
+.voices{
+  background:var(--black);
+  padding:120px 24px;
+}
+.voices-inner{max-width:960px;margin:0 auto;}
+.voices-head{text-align:center;margin-bottom:80px;}
+.voices-head-label{
+  font-family:var(--roman);font-size:11px;font-style:italic;
+  color:var(--gold);letter-spacing:4px;display:block;margin-bottom:16px;
+}
+.voices-head-h2{
+  font-family:var(--serif);font-size:clamp(22px,2.8vw,36px);
+  color:var(--white);font-weight:800;line-height:1.4;
+}
+.voice-item{
+  display:grid;grid-template-columns:180px 1fr;gap:48px;
+  padding:64px 0;border-bottom:1px solid rgba(196,154,60,.1);
+}
+.voice-item:last-child{border-bottom:none;}
+.voice-photo{width:180px;height:220px;}
+.voice-tag{
+  font-family:var(--oswald);font-size:10px;letter-spacing:.2em;
+  color:var(--gold);display:block;margin-bottom:8px;
+}
+.voice-name{
+  font-family:var(--serif);font-size:22px;color:var(--white);
+  font-weight:700;margin-bottom:4px;
+}
+.voice-meta{font-size:12px;color:var(--silver);margin-bottom:20px;}
+.voice-quote{
+  font-family:var(--serif);font-size:clamp(16px,2vw,22px);
+  color:var(--cream);font-weight:700;line-height:1.6;
+  margin-bottom:20px;letter-spacing:.02em;
+}
+.voice-body{
+  font-size:13px;color:var(--cream-d);line-height:2.1;font-weight:300;
+}
+
+/* ===================== 13 FINAL PULL ===================== */
+.final-pull{
+  background:var(--iron);
+  padding:160px 24px;text-align:center;
+  border-top:1px solid rgba(196,154,60,.2);
+  border-bottom:1px solid rgba(196,154,60,.2);
+}
+.final-pull-copy{
+  font-family:var(--serif);
+  font-size:clamp(28px,5vw,64px);
+  color:var(--white);font-weight:800;
+  line-height:1.25;letter-spacing:-.5px;
+  max-width:900px;margin:0 auto 32px;
+}
+.final-pull-copy em{color:var(--gold);font-style:normal;}
+.final-pull-body{
+  font-size:15px;color:var(--cream-d);
+  max-width:560px;margin:0 auto;
+  line-height:2.1;font-weight:300;
+}
+
+/* ===================== 14 ENTRY CTA ===================== */
+.entry-cta{
+  background:var(--black);
+  padding:120px 24px;text-align:center;
+}
+.entry-cta-label{
+  font-family:var(--roman);font-size:11px;font-style:italic;
+  color:var(--gold);letter-spacing:4px;display:block;margin-bottom:24px;
+}
+.entry-cta-h2{
+  font-family:var(--serif);font-size:clamp(26px,4vw,52px);
+  color:var(--white);font-weight:800;
+  line-height:1.3;margin-bottom:24px;
+}
+.entry-cta-sub{
+  font-size:14px;color:var(--silver);
+  line-height:2;margin-bottom:48px;letter-spacing:.06em;
+}
+.entry-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn-entry-main{
+  display:inline-block;
+  background:var(--gold);color:var(--black);
+  font-family:var(--oswald);font-size:14px;font-weight:700;letter-spacing:.2em;
+  padding:18px 48px;transition:background .2s,transform .15s;
+}
+.btn-entry-main:hover{background:var(--gold-l);transform:translateY(-2px);}
+.btn-entry-tel{
+  display:inline-block;
+  border:1px solid rgba(255,255,255,.3);color:var(--white);
+  font-family:var(--oswald);font-size:14px;letter-spacing:.15em;
+  padding:17px 48px;transition:border-color .2s,background .2s;
+}
+.btn-entry-tel:hover{border-color:var(--gold);background:rgba(196,154,60,.1);}
+.entry-tel-num{
+  font-family:var(--oswald);font-size:clamp(28px,4vw,44px);
+  color:var(--gold);letter-spacing:.1em;display:block;margin-bottom:8px;margin-top:48px;
+}
+.entry-tel-note{font-size:12px;color:var(--silver);letter-spacing:.1em;}
+
+/* ===================== FOOTER ===================== */
+.story-footer{
+  background:var(--charcoal);
+  padding:48px 24px;
+  border-top:1px solid rgba(196,154,60,.15);
+  text-align:center;
+}
+.story-footer-logo{
+  font-family:var(--oswald);font-size:18px;font-weight:700;
+  color:var(--gold);letter-spacing:.16em;margin-bottom:8px;
+}
+.story-footer-sub{font-size:11px;color:var(--silver);letter-spacing:.12em;margin-bottom:24px;}
+.story-footer-nav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:24px;}
+.story-footer-nav a{font-size:12px;color:var(--silver);transition:color .2s;letter-spacing:.06em;}
+.story-footer-nav a:hover{color:var(--gold);}
+.story-footer-copy{font-size:10px;color:rgba(255,255,255,.2);letter-spacing:.08em;}
+
+/* ===================== RESPONSIVE ===================== */
+@media(max-width:960px){
+  .themes{flex-direction:column;}
+  .theme-item{border-right:none;border-bottom:1px solid rgba(196,154,60,.12);padding:52px 32px;}
+  .fact1-inner{grid-template-columns:1fr;}
+  .s2-grid{grid-template-columns:1fr;}
+  .pull2{grid-template-columns:1fr;}
+  .pull2-photo{display:none;}
+  .machines-grid{grid-template-columns:1fr 1fr;}
+  .paths-grid{grid-template-columns:1fr 1fr;}
+  .voice-item{grid-template-columns:1fr;}
+  .voice-photo{width:100%;height:200px;}
+}
+@media(max-width:680px){
+  header{padding:0 20px;}
+  .hd-nav{display:none;}
+  .hd-ham{display:flex;}
+  .machines-grid{grid-template-columns:1fr;}
+  .paths-grid{grid-template-columns:1fr;}
+  .s2-photo-wrap{display:none;}
+  .career-step{grid-template-columns:60px 1fr;gap:20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="hd-logo">
+    <span class="hd-logo-en"><a href="index.html" style="color:inherit">HONAGA DOKON</a></span>
+    <span class="hd-logo-ja">（株）保永土建 採用特設ページ</span>
+  </div>
+  <nav class="hd-nav">
+    <a href="index.html">TOP</a>
+    <a href="#story1">Story 01</a>
+    <a href="#story2">Story 02</a>
+    <a href="#story3">Story 03</a>
+    <a href="#paths">募集ルート</a>
+    <a href="recruit.html">採用情報</a>
+    <a href="recruit_story.html" style="color:var(--gold)">求職者のみなさまへ</a>
+    <a href="contact.html" class="hd-entry">エントリーする</a>
+  </nav>
+  <button class="hd-ham" id="hdHam">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="sp-nav" id="spNav">
+  <a href="index.html" onclick="closeSpNav()">TOP</a>
+  <a href="#story1" onclick="closeSpNav()">Story 01</a>
+  <a href="#story2" onclick="closeSpNav()">Story 02</a>
+  <a href="#story3" onclick="closeSpNav()">Story 03</a>
+  <a href="#paths" onclick="closeSpNav()">募集ルート</a>
+  <a href="recruit.html" onclick="closeSpNav()">採用情報</a>
+  <a href="recruit_story.html" onclick="closeSpNav()" style="color:var(--gold-l)">求職者のみなさまへ</a>
+  <a href="contact.html" onclick="closeSpNav()" style="color:var(--gold)">エントリーする</a>
+</nav>
+
+</nav>
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-label">RECRUIT STORY</div>
+    <h1 class="page-hero-h1">
+      求職者のみなさまへ<br>
+      <em>土木の仕事で、生きる。</em>
+    </h1>
+    <p class="page-hero-sub">
+      地面の下に誇りがあり、重機の先にまちがあり、施工管理に未来がある。<br>
+      ——（株）保永土建で働く、三つの理由。
+    </p>
+    <a href="#entry" class="page-hero-cta">エントリーする →</a>
+    <nav class="breadcrumb">
+      <a href="index.html">TOP</a>
+      <span class="sep">›</span>
+      <a href="recruit.html">採用情報</a>
+      <span class="sep">›</span>
+      <span>求職者のみなさまへ</span>
+    </nav>
+  </div>
+</section>
+
+<!-- ===================== 02 3テーマ紹介 ===================== -->
+<div class="themes">
+  <div class="theme-item rev d1">
+    <div class="theme-no">01</div>
+    <div class="theme-tag">PRIDE OF INVISIBLE WORK</div>
+    <div class="theme-title">地面の下に、<br>俺の仕事がある。</div>
+    <div class="theme-desc">道路の下を流れる水道管も、アスファルトの下の路盤も、すべて土木職人の手仕事だ。完成した後、その痕跡は誰にも見えない。でも、俺は知っている。</div>
+  </div>
+  <div class="theme-item rev d2">
+    <div class="theme-no">02</div>
+    <div class="theme-tag">EXCITEMENT OF HEAVY MACHINERY</div>
+    <div class="theme-title">重機を動かす、<br>その先に何がある？</div>
+    <div class="theme-desc">ユンボ、ブルドーザー、ローラー。大型機械を自分の手足のように操り、地形を変えていく。それは単なる「作業」ではない。まちをゼロからつくる行為だ。</div>
+  </div>
+  <div class="theme-item rev d3">
+    <div class="theme-no">03</div>
+    <div class="theme-tag">THE NEXT SUMMIT</div>
+    <div class="theme-title">施工管理という、<br>もう一つの頂点へ。</div>
+    <div class="theme-desc">現場を知り尽くした職人だけが、本当に強い施工管理者になれる。工程・安全・品質・原価——現場全体を動かす司令塔として、キャリアの次のステージへ。</div>
+  </div>
+</div>
+
+<!-- ===================== 03 STORY 1 ===================== -->
+<section id="story1">
+  <div class="s1-open">
+    <span class="story-chapter rev">Story 01 — Pride</span>
+    <h2 class="s1-open-h2 rev d1">
+      完成した道路の前を歩くとき、<br>
+      <em>「ここは俺が掘った」</em>と<br>
+      思える仕事がある。
+    </h2>
+    <div class="s1-photo photo" style="min-height:55vh;">
+      <span>完成した道路・舗装工事後の全景写真<br>（夕日・車・歩行者が写り込む達成感のある1枚）</span>
+    </div>
+  </div>
+
+  <div class="s1-body">
+    <p class="rev">
+      土木の仕事は、完成した瞬間に「消える」。<br>
+      道路の下に埋めた水道管は、誰にも見えない。アスファルトの下の路盤を丁寧に締め固めた痕跡も、舗装が終われば覆われる。河川工事で積み上げた護岸ブロックも、時が経てばコケが生えて風景に溶け込む。
+    </p>
+    <p class="rev">
+      <strong>でも、俺は知っている。</strong>
+    </p>
+    <p class="rev">
+      あの道路の下に、自分が丁寧に敷き詰めた砕石がある。あの下水管の接合部を、自分がミリ単位で合わせた。あの造成地を平らにならしたのは、自分が操ったバックホウだ。——見えない場所に、確かな仕事がある。それが、土木職人の誇りだ。
+    </p>
+    <p class="rev">
+      越谷市を中心に埼玉県全域で、（株）保永土建は道路・上下水道・造成・舗装などの土木工事を手がけてきた。公共工事も民間工事も。大きな現場も小さな現場も。代表・山口のもとで、職人たちは今日もどこかの地面を掘り、管を埋め、路盤を固めている。
+    </p>
+    <p class="rev">
+      この仕事を「単純作業」だと思っている人がいるとしたら、それは違う。土の質を読む目、機械の動きを感じる感覚、周囲の職人との連携、工程の段取り——土木には、奥深い技術と判断の連続がある。そして、何年経っても色褪せない達成感がある。
+    </p>
+  </div>
+</section>
+
+<!-- ===================== 04 PULL QUOTE 1 ===================== -->
+<div class="pull1">
+  <p class="pull1-quote rev">
+    見えない仕事を、<br>
+    <em>正確にやり切ること。</em><br>
+    それが、一流の土木職人だ。
+  </p>
+  <span class="pull1-source rev d1">— （株）保永土建 / 施工理念</span>
+</div>
+
+<!-- ===================== 05 FACT — インフラの現実 ===================== -->
+<div class="fact1">
+  <div class="fact1-inner">
+    <div class="fact1-text revL">
+      <span class="fact1-no">01 — The Reality</span>
+      <h2 class="fact1-h2">
+        道路1kmの下に、<br>
+        <em>何百本もの管</em>が<br>
+        走っている。
+      </h2>
+      <div class="fact1-div"></div>
+      <div class="fact1-body">
+        <p>市道1kmを改修する工事には、上水道・下水道・ガス・電気などのインフラが複雑に絡み合う。土木職人はその地下構造を読み解きながら、順序よく掘削し、管を設置し、埋め戻す。失敗は許されない——市民生活がそこにかかっている。</p>
+        <p>越谷市では近年、老朽化した下水管や道路の更新工事が増加している。保永土建は地元の道路事情を熟知し、迅速かつ丁寧な施工でその需要に応えてきた。</p>
+      </div>
+      <div class="fact1-nums rev">
+        <div class="fact1-num">
+          <p class="n">30<b>年以上</b></p>
+          <p class="l">越谷市での施工歴<br>地元インフラを支え続ける</p>
+        </div>
+        <div class="fact1-num">
+          <p class="n">埼玉<b>全域</b></p>
+          <p class="l">対応エリア<br>県内多数の実績</p>
+        </div>
+      </div>
+    </div>
+    <div class="fact1-photo photo gold-tint revR">
+      <span>下水道本管敷設工事の現場写真<br>（管が地面に並んでいる・職人が作業中の1枚）</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 06 STORY 2 — 重機 ===================== -->
+<section id="story2">
+  <div class="s2-open">
+    <div class="s2-inner">
+      <span class="story-chapter rev">Story 02 — Machine &amp; Will</span>
+      <div class="s2-grid">
+        <div class="s2-left">
+          <h2 class="s2-h2 rev d1">
+            重機を動かす、<br>
+            <em>その先に</em><br>
+            何がある？
+          </h2>
+          <div class="s2-div rev d2"></div>
+          <div class="rev d2">
+            <div class="s2-body">
+              <p>バックホウのレバーを握った瞬間、世界が変わる。重さ10トンを超える鉄の塊が、自分の意志で動く。爪を立て、地面をすくい、土を動かす。その感覚は、言葉で説明できない種類の興奮だ。</p>
+              <p>でも、重機を動かすことがゴールじゃない。その先に、道路ができる。住宅地になる。水が通る。人々の生活が生まれる。——重機は、まちを作るための「手」なのだ。</p>
+              <p>保永土建では、バックホウ・ブルドーザー・モーターグレーダー・振動ローラーなど、様々な建設機械を使いこなす技術を現場で習得できる。資格取得支援も充実しており、「重機を操りたい」という意欲があれば、確実にスキルアップできる環境がある。</p>
+            </div>
+          </div>
+        </div>
+        <div class="s2-photo-wrap revR">
+          <div class="s2-photo-a photo mid">
+            <span>バックホウ（ユンボ）が掘削している現場写真<br>（迫力のある1枚）</span>
+          </div>
+          <div class="s2-photo-b photo">
+            <span>ブルドーザーで造成中の現場写真</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 07 MACHINE ITEMS ===================== -->
+<div class="machines">
+  <div class="machines-inner">
+    <div class="machines-head">
+      <span class="machines-head-label rev">02 — The Machines</span>
+      <h2 class="machines-head-h2 rev d1">
+        土木職人が操る、<br>力強い相棒たち。
+      </h2>
+    </div>
+    <div class="machines-grid">
+      <div class="machine-card rev d1">
+        <div class="machine-icon">BH</div>
+        <div class="machine-name">バックホウ（ユンボ）</div>
+        <div class="machine-role">BACKHOE EXCAVATOR</div>
+        <div class="machine-desc">掘削・積み込み・整地など、土木工事の主力機械。アームの動きを体の延長として操る感覚は、熟練するほど増す。</div>
+      </div>
+      <div class="machine-card rev d2">
+        <div class="machine-icon">BD</div>
+        <div class="machine-name">ブルドーザー</div>
+        <div class="machine-role">BULLDOZER</div>
+        <div class="machine-desc">大量の土砂を一気に押し出す造成工事の象徴。直線的で力強い走行が、造成地の荒地を瞬く間に整地へと変える。</div>
+      </div>
+      <div class="machine-card rev d3">
+        <div class="machine-icon">VR</div>
+        <div class="machine-name">振動ローラー</div>
+        <div class="machine-role">VIBRATION ROLLER</div>
+        <div class="machine-desc">路盤・アスファルトの締固めに使用。何層にも積み重ねた工程の「仕上げ」を担う、品質を決める重要な機械だ。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 08 PULL QUOTE 2 ===================== -->
+<div class="pull2">
+  <div class="pull2-dark">
+    <p class="pull2-quote revL">
+      重機は怖くない。<br>
+      <em>慣れたら、楽しい。</em><br>
+      その先に、もっと面白い<br>
+      世界が待っている。
+    </p>
+  </div>
+  <div class="pull2-photo photo light">
+    <span>重機のキャビン内から見た現場風景<br>（オペレーターの視点・臨場感のある1枚）</span>
+  </div>
+</div>
+
+<!-- ===================== 09 STORY 3 — 施工管理 ===================== -->
+<section id="story3">
+  <div class="s3-open">
+    <span class="story-chapter rev">Story 03 — The Next Summit</span>
+    <h2 class="s3-h2 rev d1">
+      現場を知る人間が、<br>
+      <em>現場を動かす側へ。</em>
+    </h2>
+    <div class="s3-photo photo" style="height:55vh;min-height:380px;">
+      <span>施工管理者が図面を持ち現場全体を見渡す写真<br>（俯瞰・ヘルメット姿・現場全景が広がる1枚）</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 10 CAREER STEPS ===================== -->
+<div class="career">
+  <div class="career-inner">
+    <div class="career-head">
+      <span class="career-head-label rev">03 — The Path</span>
+      <h2 class="career-head-h2 rev d1">
+        職人から施工管理へ。<br>成長の道のり。
+      </h2>
+    </div>
+
+    <div class="career-step rev">
+      <div class="career-step-left">
+        <div class="career-step-num">01</div>
+        <div class="career-step-yr">〜6ヶ月</div>
+      </div>
+      <div class="career-step-right">
+        <h3 class="career-step-title">現場の「体」を覚える。</h3>
+        <div class="career-step-body">道具の名前、資材の種類、現場でのマナー。先輩の横について動き続ける中で、土木の現場リズムが体に染み込んでいく。「なぜこう掘るのか」「なぜここに管が来るのか」——理由を考えながら手を動かす習慣がすべての出発点だ。</div>
+      </div>
+    </div>
+
+    <div class="career-step rev">
+      <div class="career-step-left">
+        <div class="career-step-num">02</div>
+        <div class="career-step-yr">〜2年</div>
+      </div>
+      <div class="career-step-right">
+        <h3 class="career-step-title"><em>技術と資格</em>を積み上げる。</h3>
+        <div class="career-step-body">掘削・埋戻し・舗装・管工事の基本技術が身につく。玉掛け・小型車両系建設機械など各種資格の取得を目指すタイミング。資格は「できることの証明書」——手当にも直結する。会社は費用・時間・指導でしっかりバックアップする。</div>
+      </div>
+    </div>
+
+    <div class="career-step rev">
+      <div class="career-step-left">
+        <div class="career-step-num">03</div>
+        <div class="career-step-yr">〜5年</div>
+      </div>
+      <div class="career-step-right">
+        <h3 class="career-step-title">一人で現場を、任される。</h3>
+        <div class="career-step-body">様々な工種を経験し、一人で現場を仕切れる力が身につく。先輩から「あとは頼む」と言われた瞬間、職人としての自覚が変わる。2級土木施工管理技士の受験を視野に入れ、「管理する側」への準備が始まる。</div>
+      </div>
+    </div>
+
+    <div class="career-step rev">
+      <div class="career-step-left">
+        <div class="career-step-num">04</div>
+        <div class="career-step-yr">5年以降</div>
+      </div>
+      <div class="career-step-right">
+        <h3 class="career-step-title">施工管理者として、<em>現場全体を動かす。</em></h3>
+        <div class="career-step-body">施工管理技士として工程・安全・品質・原価を一括管理。現場で職人と共に汗をかいてきた経験が、ここで最大の強みになる。机上の管理ではなく、現場を知る管理者として、若い職人たちを育てる側へ。これが、土木キャリアのもう一つの頂点だ。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 11 PATHS / 募集ルート ===================== -->
+<div class="paths" id="paths">
+  <div class="paths-inner">
+    <div class="paths-head">
+      <span class="paths-head-label rev">Your Career Path</span>
+      <h2 class="paths-head-h2 rev d1">あなたの、スタート地点はどこですか？</h2>
+      <div class="paths-head-sub rev d2">3つのルートから、今の自分に近いものを選んでください。</div>
+    </div>
+    <div class="paths-grid">
+      <div class="path-card rev d1">
+        <div class="path-route">Route 01</div>
+        <div class="path-title">土木作業員<br>（未経験スタート）</div>
+        <div class="path-desc">業界未経験・重機未経験でも大丈夫。先輩職人の横について、現場の「体」を覚えるところから始めます。やる気さえあれば、確実に成長できる環境があります。異業種からの転職者も多数活躍中。</div>
+      </div>
+      <div class="path-card rev d2">
+        <div class="path-route">Route 02</div>
+        <div class="path-title">土木作業員<br>（経験・資格保有）</div>
+        <div class="path-desc">これまでの技術・資格を正当に評価します。玉掛け・車両系建設機械・土木施工管理技士など、保有資格に応じた待遇をご提示。大きな現場で実力を発揮できる場があります。</div>
+      </div>
+      <div class="path-card rev d3">
+        <div class="path-route">Route 03<span class="path-new">NEW</span></div>
+        <div class="path-title">施工管理技士<br>（目指したい・経験者）</div>
+        <div class="path-desc">現場経験を積みながら2級土木施工管理技士の取得を目指す方も、すでに資格をお持ちの経験者も歓迎。保永土建の成長フェーズに施工管理として参画してください。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 12 VOICE ===================== -->
+<div class="voices">
+  <div class="voices-inner">
+    <div class="voices-head">
+      <span class="voices-head-label rev">Staff Voice</span>
+      <h2 class="voices-head-h2 rev d1">この仕事を選んだ理由を、聞いた。</h2>
+    </div>
+
+    <div class="voice-item rev">
+      <div class="voice-photo photo mid">
+        <span>Aさん<br>写真</span>
+      </div>
+      <div>
+        <span class="voice-tag">Voice 01 — 未経験入社 / 4年目</span>
+        <p class="voice-name">Aさん（29歳）</p>
+        <p class="voice-meta">土木作業員 / 飲食業からの転職</p>
+        <p class="voice-quote">「完成した道路の前に立つと、<br>ここは俺が掘ったって、わかる。それだけで十分だった。」</p>
+        <p class="voice-body">もともと飲食で働いていたけど、体を動かす仕事がしたくて転職した。最初は何もわからなかったけど、先輩が丁寧に教えてくれた。2年目に玉掛けを取って、3年目には小型車両系建設機械の資格も取れた。今は一人で任せてもらえる現場も出てきた。「見えない仕事」だけど、自分が何かを作ったって感覚がある。それがこの仕事の面白さだと思う。</p>
+      </div>
+    </div>
+
+    <div class="voice-item rev">
+      <div class="voice-photo photo">
+        <span>Bさん<br>写真</span>
+      </div>
+      <div>
+        <span class="voice-tag">Voice 02 — 経験者入社 / 7年目</span>
+        <p class="voice-name">Bさん（38歳）</p>
+        <p class="voice-meta">土木作業員・資格保有 / 経験者転職</p>
+        <p class="voice-quote">「バックホウを初めて自分で動かした日、<br>俺はこの仕事で食っていこうって決めた。」</p>
+        <p class="voice-body">前職でも土木をやっていたが、待遇面と現場の規模感に不満があって転職した。保永土建は社長が現場をよく知っていて、職人への敬意がある会社だと感じた。今は施工管理技士の資格取得を目指しながら、若い職人に教える立場にもなってきた。重機を動かすのは今でも好きだが、現場全体を動かすことへの興味も出てきている。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 13 FINAL PULL ===================== -->
+<div class="final-pull">
+  <p class="final-pull-copy rev">
+    地面の下に誇りがあり、<br>
+    重機の先に<em>まち</em>があり、<br>
+    施工管理に<em>未来</em>がある。<br>
+    ——これが、土木の仕事だ。
+  </p>
+  <p class="final-pull-body rev d1">
+    （株）保永土建は、越谷市の土木職人たちと共に、埼玉のインフラを支え続けてきた。あなたのやる気と覚悟を、誠実に受け取る会社がここにある。
+  </p>
+</div>
+
+<!-- ===================== 14 ENTRY CTA ===================== -->
+<div class="entry-cta" id="entry">
+  <span class="entry-cta-label rev">Join Us</span>
+  <h2 class="entry-cta-h2 rev d1">
+    一緒に、<br>
+    地面から埼玉を支えませんか。
+  </h2>
+  <p class="entry-cta-sub rev d2">
+    未経験歓迎・経験者優遇。<br>
+    まずはお気軽にお問い合わせください。現地見学も随時受付中です。
+  </p>
+  <div class="entry-btns rev d3">
+    <a href="contact.html" class="btn-entry-main">メールでエントリーする</a>
+    <a href="tel:0489479151" class="btn-entry-tel">電話で相談する</a>
+  </div>
+  <a href="tel:0489479151" class="entry-tel-num rev d4">048-947-9151</a>
+  <p class="entry-tel-note rev d4">受付時間 8:00〜18:00（日曜・祝日を除く）</p>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="story-footer">
+  <div class="story-footer-logo">HONAGA DOKON</div>
+  <div class="story-footer-sub">（株）保永土建 | 埼玉県越谷市大間野町３－２４－１</div>
+  <nav class="story-footer-nav">
+    <a href="index.html">TOPページへ</a>
+    <a href="service.html">施工案内</a>
+    <a href="works.html">施工実績</a>
+    <a href="company.html">会社概要</a>
+    <a href="recruit.html">採用情報</a>
+    <a href="contact.html">お問い合わせ</a>
+  </nav>
+  <p class="story-footer-copy">© 2024 （株）保永土建. All Rights Reserved.</p>
+</footer>
+
+<script>
+const ham=document.getElementById('hdHam');const spNav=document.getElementById('spNav');
+ham.addEventListener('click',()=>{ham.classList.toggle('open');spNav.classList.toggle('open');document.body.style.overflow=spNav.classList.contains('open')?'hidden':''});
+function closeSpNav(){ham.classList.remove('open');spNav.classList.remove('open');document.body.style.overflow=''}
+const revItems=document.querySelectorAll('.rev,.revL,.revR');
+const revObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.10});
+revItems.forEach(el=>revObs.observe(el));
+</script>
+</body>
+</html>
